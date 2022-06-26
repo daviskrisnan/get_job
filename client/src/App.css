@@ -4,7 +4,7 @@
 
 .title-navbar{
   color: #fff;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .nav-link{
@@ -80,4 +80,12 @@ li{
 .text-joblist {
   margin: 5px auto;
   padding-left: 10px;
+}
+
+.title-job {
+  color: blue;
+}
+
+.type-job {
+  color: #46de4b;
 }

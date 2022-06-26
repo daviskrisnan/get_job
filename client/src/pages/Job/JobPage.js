@@ -101,8 +101,8 @@ const JobPage = () => {
         </div>
       </div>
 
-      <div className='col-12'>
-        <div style={{ padding: "50px" }}>
+      <div className='row m-0 p-0 justify-content-center'>
+        <div className='col-8 m-0 p-0 '>
           <JobList key={search} description={descList} location={locationList} fulltime={isFulltimeList} page={page} />
         </div>
         <ul className="pagination justify-content-center">
@@ -119,17 +119,6 @@ const JobPage = () => {
           </li>
         </ul>
       </div>
-
-
-      {/* <div className='col-12'>
-          <JobList key={search} description={descList} location={locationList} fulltime={isFulltimeList} page={page} />
-          <div className='count-btn'>
-            <button onClick={() => changePage(-1)}><p>Prev</p></button>
-            <p>{page}</p>
-            <button onClick={() => changePage(1)}><p>Next</p></button>
-          </div>
-        </div> */}
-
     </>
   )
 }

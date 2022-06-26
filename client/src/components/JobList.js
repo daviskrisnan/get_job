@@ -26,16 +26,19 @@ const JobList = (data) => {
                             if ((data.fulltime && data.type !== "Full Time") || (!data.fulltime && data.type === "Full Time")) {
                                 return (
                                     <>
-                                        <div className="row row-cols-1 row-cols-md-3 g-2">
-                                            <div className="col">
-                                                <div className="card h-100"  onClick={() => {
+                                        <div className="row mx-0 my-2 p-0">
+                                            <div className="card">
+                                                <div className="card-body"  onClick={() => {
                                                     navigation('/home/' + job.id);
                                                     window.location.reload();
                                                 }} key={job.id} >
-                                                    <div className="card-body">
-                                                        <h5 className="card-title"><strong>{job.title}</strong></h5>
-                                                        <p className="card-text">{job.company} - <strong>{job.type}</strong></p>
-                                                        <p className="card-text">{job.location}</p>
+                                                    <div className="row m-0 p-0 d-flex ms-1 me-auto">
+                                                        <h5 className="m-0 p-0 title-job"><strong>{job.title}</strong></h5>
+                                                        <p className="m-0 p-0">{job.company} - <strong className='type-job'>{job.type}</strong></p>
+                                                    </div>
+                                                    <div className='row m-0 p-0 d-flex ms-auto me-1 text-end'>
+                                                        <p className="m-0 p-0">{job.location}</p>
+                                                        <p className="m-0 p-0">{job.created_at.slice(0,16)}</p>
                                                     </div>
                                                 </div>
                                             </div>
